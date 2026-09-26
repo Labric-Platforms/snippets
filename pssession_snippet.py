@@ -207,7 +207,7 @@ HANDLERS = {
 }
 
 
-def read_psession(path: str) -> None:
+def read_pssession(path: str) -> None:
     for raw_measurement in load_session(path)["Measurements"]:
         measurement = read_measurement(raw_measurement)
         handler = HANDLERS.get(measurement["method_id"])
